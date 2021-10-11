@@ -1,0 +1,4 @@
+define service ZD425_COMPLAINT_99 {
+  expose ZC_D425_COMPLAINT_99 as Complaint;
+  expose ZCE_D425_INVOICES_99 as Invoice;
+}

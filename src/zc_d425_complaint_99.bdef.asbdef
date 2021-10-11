@@ -1,0 +1,9 @@
+projection;
+
+define behavior for ZC_D425_COMPLAINT_99 alias Complaint
+
+{
+  use create;
+  use update;
+  use delete;
+}

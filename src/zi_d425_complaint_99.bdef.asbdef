@@ -1,0 +1,38 @@
+managed;
+
+define behavior for ZI_D425_COMPLAINT_99 alias Complaint
+implementation in class ZBP_I_D425_Complaint_99 unique
+persistent table Z425_COMPLAINT99
+etag master LastChangedAt
+lock master
+
+{
+  field ( readonly )
+   ComplaintID;
+
+  field ( numbering : managed )
+   UUID;
+
+
+  create;
+  update;
+  delete;
+
+  mapping for Z425_COMPLAINT99
+  {
+    UUID = UUID;
+    ComplaintID = COMPLAINT_ID;
+    InvoiceID = INVOICE_ID;
+    CustomerID = CUSTOMER_ID;
+    CustomerName = CUSTOMER_NAME;
+    Reason = REASON;
+    Action = ACTION;
+    Closed = CLOSED;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+
+  determination CalculateComplaintID on save { create; }
+}

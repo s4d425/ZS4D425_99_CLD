@@ -1,0 +1,5 @@
+@EndUserText.label: 'ZSC_D425_INVOICES_99'
+@OData.schema.name: 'ZZ1_CUSTOMERINVOICE99_CDS'
+define service ZSC_D425_INVOICES_99 {
+ expose ZD425_99_ZZ1_CUSTOMERINVOICE99; 
+ } 
